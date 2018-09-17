@@ -1,0 +1,4 @@
+node_modules
+packages/app/dist
+packages/shared/dist
+.idea

@@ -1,0 +1,19 @@
+{
+  "name": "parent",
+  "version": "1.0.0",
+  "private": true,
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "cd packages/app && yarn start",
+    "build": "lerna run build --parallel --scope @app/shared",
+    "build-watch": "lerna run watch --parallel --stream --scope @app/shared",
+    "build-prod": "yarn build && cd packages/app && yarn build"
+  },
+  "devDependencies": {
+    "lerna": "^3.4.0",
+    "rimraf": "^2.6.2",
+    "typescript": "^3.0.3"
+  }
+}
