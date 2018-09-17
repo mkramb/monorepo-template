@@ -10,9 +10,7 @@ module.exports = merge(config, {
     },
     plugins: [
         new webpack.DefinePlugin({
-            'process.env.CDX_API_ENDPOINT': (
-                process.env.CDX_API_ENDPOINT && JSON.stringify(process.env.CDX_API_ENDPOINT)
-            )
+            'process.env.API_ENDPOINT': process.env.API_ENDPOINT && JSON.stringify(process.env.API_ENDPOINT)
         }),
         new HtmlWebpackPlugin({
             inject: true,
