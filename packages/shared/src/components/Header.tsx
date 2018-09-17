@@ -1,7 +1,7 @@
 import * as React from 'react';
 
 export interface HeaderProps {
-  children: React.ReactNode;
+    children: React.ReactNode;
 }
 
 export const styles = {

@@ -5,7 +5,7 @@ export function Application() {
     return (
         <div>
             <Header>Template</Header>
-            <div>Content</div>
+            <div>Content1</div>
         </div>
     );
 }

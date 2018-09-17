@@ -25,13 +25,23 @@ module.exports = {
     module: {
         rules: [
             {
+                enforce: 'pre',
+                test: /\.js$|\.jsx$|\.tsx?$/,
+                exclude: /node_modules/,
+                use: 'tslint-loader'
+            },
+            {
+                enforce: 'pre',
+                test: /\.js$|\.jsx$|\.tsx?$/,
+                exclude: /node_modules/,
+                use: 'tslint-loader'
+            },
+            {
                 test: /\.js$|\.jsx$|\.tsx?$/,
                 exclude: /node_modules/,
                 use: 'ts-loader'
             }
         ]
     },
-    plugins: [
-        new webpack.NoEmitOnErrorsPlugin()
-    ]
+    plugins: [new webpack.NoEmitOnErrorsPlugin()]
 };
